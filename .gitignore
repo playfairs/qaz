@@ -2,3 +2,6 @@
 logfile
 .postgres
 *var*
+*__pycache__*
+*.DS_Store*
+.vscode

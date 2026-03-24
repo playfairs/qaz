@@ -1,0 +1,24 @@
+[[language]]
+name = "python"
+roots = ["pyproject.toml", "requirements.txt", ".git"]
+auto-format = true
+language-servers = ["pyright"]
+indent = { unit = "    ", tab-width = 4 }
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+autoSearchPaths = true
+useLibraryCodeForTypes = true
+
+[language-server.pyright.config.python.analysis.inlayHints]
+variableTypes = true
+functionReturnTypes = true
+callArgumentNames = "all"
+
+[language.formatter]
+command = "black"
+args = ["--quiet", "-"]

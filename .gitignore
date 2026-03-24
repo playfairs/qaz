@@ -1,3 +1,4 @@
 .env
 logfile
 .postgres
+*var*
